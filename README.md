@@ -2,6 +2,25 @@
 
 This is a task management application built using React and Chakra UI. It allows users to manage tasks, filter and search tasks based on various criteria, and edit or delete tasks. The application differentiates between admin and user roles, with admins having the ability to create, edit, and delete tasks, while users can only view and edit the status of tasks assigned to them.
 
+## Sample/Existing User Crendientals:
+
+### Admin 
+
+- **Username:** admin
+- **Password:** admin
+
+### User
+
+- **Username:** Sundar
+- **Password:** Sundar
+
+- **Username:** Ram
+- **Password:** Ram
+
+- **Username:** Priya
+- **Password:** Priya
+
+
 ## Features
 
 - **Admin Role:**
