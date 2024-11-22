@@ -22,6 +22,13 @@ export const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    
+    if (!formData.username || !formData.password || !formData.role) {
+      setError('All fields are required.');
+      
+      return; 
+    }
+
     try {
       const response = await axios.get(url); 
       const users = response.data;
@@ -36,8 +43,8 @@ export const Registration = () => {
       await axios.post(url, formData);
       alert('User registered successfully!');
       setFormData({ username: '', password: '', role: '' });
-      setError('');
-      navigate("/login");
+      setError(''); 
+      navigate("/login"); 
     } catch (error) {
       console.error("Error registering user:", error);
       alert('Error registering user');
@@ -60,6 +67,7 @@ export const Registration = () => {
             value={formData.username}
             onChange={handleChange}
             placeholder="Enter username"
+            borderColor={!formData.username && error ? 'red.500' : 'gray.200'}
           />
         </Box>
         <Box mb="4">
@@ -71,6 +79,7 @@ export const Registration = () => {
             value={formData.password}
             onChange={handleChange}
             placeholder="Enter password"
+            borderColor={!formData.password && error ? 'red.500' : 'gray.200'}
           />
         </Box>
         <Box mb="4">
@@ -81,6 +90,7 @@ export const Registration = () => {
             value={formData.role}
             onChange={handleChange}
             placeholder="Select role"
+            borderColor={!formData.role && error ? 'red.500' : 'gray.200'}
           >
             <option value="admin">Admin</option>
             <option value="user">User</option>

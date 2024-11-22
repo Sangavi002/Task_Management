@@ -18,6 +18,13 @@ export const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!credentials.username || !credentials.password ) {
+      setError('All fields are required.');
+      
+      return; 
+    }
+
     const url = "https://todo-349ec-default-rtdb.asia-southeast1.firebasedatabase.app/User.json";
 
     try {
@@ -68,6 +75,7 @@ export const Login = () => {
             value={credentials.username}
             onChange={handleChange}
             placeholder="Enter username"
+            borderColor={!credentials.username && error ? 'red.500' : 'gray.200'}
           />
         </Box>
         <Box mb="4">
@@ -79,6 +87,7 @@ export const Login = () => {
             value={credentials.password}
             onChange={handleChange}
             placeholder="Enter password"
+            borderColor={!credentials.password && error ? 'red.500' : 'gray.200'}
           />
         </Box>
         <Button type="submit" colorScheme="blue" width="full">
