@@ -11,14 +11,16 @@ This is a task management application built using React and Chakra UI. It allows
 
 ### User
 
-- **Username:** Sundar
-- **Password:** Sundar
+1. - **Username:** Sundar
+   - **Password:** Sundar
 
-- **Username:** Ram
-- **Password:** Ram
 
-- **Username:** Priya
-- **Password:** Priya
+2. - **Username:** Ram
+   - **Password:** Ram
+
+
+3. - **Username:** Priya
+   - **Password:** Priya
 
 
 ## Features
