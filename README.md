@@ -84,10 +84,10 @@ src/
 
 The app communicates with Firebase Realtime Database using Axios. All tasks are stored in the database, and the following operations are supported:
 
-- GET: Fetch tasks from the database
-- POST: Create a new task
-- PATCH: Update an existing task
-- DELETE: Remove a task from the database
+- **GET:** Fetch tasks from the database
+- **POST:** Create a new task
+- **PATCH:** Update an existing task
+- **DELETE:** Remove a task from the database
   
 ## Authentication
 
